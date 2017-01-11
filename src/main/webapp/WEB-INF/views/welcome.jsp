@@ -21,9 +21,9 @@
         <div class="container">
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">홈으로</a></li>
-                    <li><a>부트스트랩이란</a></li>
-                    <li><a>문의하기</a></li>
+                    <li class="active"><a href="#">인사말</a></li>
+                    <li><a>Tier Search</a></li>
+                    <li><a>만든이</a></li>
                 </ul>
             </div>
         </div>
