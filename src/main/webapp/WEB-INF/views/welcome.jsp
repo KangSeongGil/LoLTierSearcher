@@ -5,8 +5,8 @@
   Time: PM 11:55
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-         pageEncoding="ISO-8859-1" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8" %>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -20,9 +20,9 @@
     <div class="container">
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">???</a></li>
-                <li><a href="#about">???????</a></li>
-                <li><a href="#contact">????</a></li>
+                <li class="active"><a href="#">홈으로</a></li>
+                <li><a href="#about">부트스트랩이란</a></li>
+                <li><a href="#contact">문의하기</a></li>
             </ul>
         </div>
     </div>
