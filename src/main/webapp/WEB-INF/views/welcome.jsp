@@ -23,12 +23,17 @@
                 <ul class="nav navbar-nav">
                     <li class="active"><a>인사말</a></li>
                     <li><a>Tier Search</a></li>
-                    <li><a>만든이</a></li>
+                    <li><a>만든이</a></li
                 </ul>
             </div>
         </div>
     </div>
+    <div class="container">
+        <div style="margin-top: 100px;">
+            <h1>Greeting : ${greeting}</h1>
+        </div>
+    </div>
 </div>
-Greeting : ${greeting}
+</div>
 </body>
 </html>

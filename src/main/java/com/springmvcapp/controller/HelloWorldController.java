@@ -16,7 +16,7 @@ public class HelloWorldController {
 
     @RequestMapping(method = RequestMethod.GET)
     public String sayHello(ModelMap model) {
-        model.addAttribute("greeting", "Hello World from Spring 4 MVC");
+        model.addAttribute("greeting", "안녕하세요 롤 티어 검색기 입니다");
         return "welcome";
     }
 
