@@ -1,0 +1,9 @@
+
+<%--
+  Created by IntelliJ IDEA.
+  User: KangSeongGil
+  Date: 2017. 1. 5.
+  Time: PM 11:55
+  To change this template use File | Settings | File Templates.
+--%>
+<h1>${greeting}</h1>
