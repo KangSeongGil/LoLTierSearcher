@@ -7,8 +7,15 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 </head>
 <body>
-    #parse("/WEB-INF/fragments/_header.vm")
-    #parse("/WEB-INF/fragments/_footer.vm.vm")
+    <div>
+        #parse("/WEB-INF/fragments/_header.vm")
+    </div>
+    <div>
+        $screen_content
+    </div>
+    <div>
+        #parse("/WEB-INF/fragments/_footer.vm.vm")
+    </div>
 </body>
 </html>
 
