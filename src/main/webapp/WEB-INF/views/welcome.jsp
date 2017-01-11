@@ -22,8 +22,8 @@
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="#">홈으로</a></li>
-                    <li><a href="#about">부트스트랩이란</a></li>
-                    <li><a href="#contact">문의하기</a></li>
+                    <li><a>부트스트랩이란</a></li>
+                    <li><a>문의하기</a></li>
                 </ul>
             </div>
         </div>
