@@ -28,12 +28,12 @@
             </div>
         </div>
     </div>
-    <div class="container">
-        <div style="margin-top: 100px;">
-            <h1>Greeting : ${greeting}</h1>
-        </div>
-    </div>
 </div>
+</div>
+<div class="container">
+    <div style="margin-top: 100px;">
+        <h1>Greeting : ${greeting}</h1>
+    </div>
 </div>
 </body>
 </html>
