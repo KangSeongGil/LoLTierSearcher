@@ -14,7 +14,7 @@
         $screen_content
     </div>
     <div>
-        #parse("/WEB-INF/fragments/_footer.vm.vm")
+        #parse("/WEB-INF/fragments/_footer.vm")
     </div>
 </body>
 </html>
