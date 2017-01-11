@@ -9,7 +9,7 @@
 <body>
 
     #parse("/WEB-INF/fragments/_header.vm")
-    <div>
+    <div class="container">
         $screen_content
     </div>
     #parse("/WEB-INF/fragments/_footer.vm")
