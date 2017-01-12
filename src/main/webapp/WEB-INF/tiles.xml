@@ -3,11 +3,15 @@
         "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
         "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
 <tiles-definitions>
-    <definition name="base.definition"
-                template="/WEB-INF/layouts/layout.vm">
-        <put-attribute name="title" value="" />
+
+
+    <definition name="main" template="/WEB-INF/layouts/layout.vm" templateType="velocity">
         <put-attribute name="header" value="/WEB-INF/fragments/_header.vm" />
-        <put-attribute name="body" value="" />
+        <put-attribute name="body"/>
         <put-attribute name="footer" value="/WEB-INF/fragments/_footer.vm" />
+    </definition>
+
+    <definition name="welcome.tile" extends="main">
+        <put-attribute name="body" value="/WEB-INF/views/welcome.vm" />
     </definition>
 </tiles-definitions>
