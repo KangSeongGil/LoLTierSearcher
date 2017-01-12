@@ -51,8 +51,6 @@
         <property name="contentType" value="text/html; charset=utf-8"></property>
         <property name="toolboxConfigLocation" value="/WEB-INF/velocity-tools.xml"></property>
         <property name="suffix" value=".tile" />
-        <property name="viewClass"
-                  value="com.lolTierSearch.springmvcapp.controller" />
     </bean>
 
 </beans>
