@@ -43,12 +43,13 @@
     </bean>
 
 
-    <!-- Tiles ViewResolver-->
+    <!-- Tiles ViewResolver
     <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="viewClass">
             <value>org.springframework.web.servlet.view.tiles.TilesView</value>
         </property>
     </bean>
+    -->
 
     <!-- Spring MVC
     <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -58,7 +59,7 @@
     </bean>
     -->
 
-    <!-- Velocity ViewResolver
+    <!-- Velocity ViewResolver-->
     <bean id="viewResolver" class="org.springframework.web.servlet.view.velocity.VelocityViewResolver">
         <property name="cache" value="true" />
         <property name="suffix" value=".vm" />
@@ -67,6 +68,6 @@
         <property name="contentType" value="text/html; charset=UTF-8" />
         <property name="exposeSpringMacroHelpers" value="true" />
     </bean>
-    -->
+
 
 </beans>
