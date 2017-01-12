@@ -50,7 +50,7 @@
         <property name="order" value="1" />
         <property name="contentType" value="text/html; charset=utf-8"></property>
         <property name="toolboxConfigLocation" value="/WEB-INF/velocity-tools.xml"></property>
-        <property name="suffix" value=".tile" />
+        <property name="suffix" value=".vm" />
     </bean>
 
 </beans>
