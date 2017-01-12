@@ -19,19 +19,5 @@
         <url-pattern>/</url-pattern>
     </servlet-mapping>
 
-    <!-- Other XML Configuration -->
-    <!-- Load by Spring ContextLoaderListener -->
-    <context-param>
-        <param-name>contextConfigLocation</param-name>
-        <param-value>
-            /WEB-INF/spring-mvc-servlet.xml
-        </param-value>
-    </context-param>
-
-
-    <!-- Spring ContextLoaderListener -->
-    <listener>
-        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-    </listener>
 
 </web-app>
