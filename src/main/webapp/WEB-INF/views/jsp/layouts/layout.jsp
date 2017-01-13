@@ -1,4 +1,6 @@
-<%@ include file="/WEB-INF/tiles/includes.jsp" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles" %>
+
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -7,7 +9,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 </head>
 <body>
-안녕
+<tiles:insertAttribute name="header"/>
+
+<tiles:insertAttribute name="footer"/>
+
 </body>
 </html>
 
