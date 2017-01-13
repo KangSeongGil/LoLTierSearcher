@@ -44,13 +44,13 @@
 
 
 
-    <!-- Tiles ViewResolver -->
+    <!-- Tiles ViewResolver
     <bean id="tilesViewResolver" class="org.springframework.web.servlet.view.tiles3.TilesViewResolver">
         <property name="viewClass">
             <value>org.springframework.web.servlet.view.tiles3.TilesView</value>
         </property>
     </bean>
-
+    -->
 
     <!-- Spring MVC
     <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -61,7 +61,7 @@
     -->
 
     <!-- Velocity ViewResolver-->
-    <!--
+
     <bean id="viewResolver" class="org.springframework.web.servlet.view.velocity.VelocityViewResolver">
         <property name="cache" value="true" />
         <property name="prefix" value="" />
@@ -72,5 +72,5 @@
         <property name="exposeSpringMacroHelpers" value="true" />
         <property name="order" value="1" />
     </bean>
-    -->
+
 </beans>
