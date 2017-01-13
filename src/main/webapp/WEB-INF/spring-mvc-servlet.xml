@@ -29,11 +29,9 @@
         </property>
     </bean>
 
-    <bean id="velocityConfig"
-          class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">
-        <property name="resourceLoaderPath">
-            <value>/</value>
-        </property>
+
+    <bean id="velocityConfig" class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">
+        <property name="resourceLoaderPath"><value>/WEB-INF/velocity/</value></property>
         <property name="velocityProperties">
             <props>
                 <prop key="input.encoding">utf-8</prop>
@@ -42,6 +40,12 @@
         </property>
     </bean>
 
+    <bean id="viewResolver"
+            class="org.springframework.web.servlet.view.velocity.VelocityViewResolver">
+        <property name="cache"><value>true</value></property>
+        <property name="prefix"><value></value></property>
+        <property name="suffix"><value>.vm</value></property>
+    </bean>
 
     <!-- Tiles ViewResolver
     <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -60,6 +64,7 @@
     -->
 
     <!-- Velocity ViewResolver-->
+    <!--
     <bean id="viewResolver" class="org.springframework.web.servlet.view.velocity.VelocityViewResolver">
         <property name="cache" value="true" />
         <property name="prefix" value="" />
@@ -70,6 +75,5 @@
         <property name="exposeSpringMacroHelpers" value="true" />
         <property name="order" value="1" />
     </bean>
-
-
+    -->
 </beans>
