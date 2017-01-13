@@ -11,6 +11,7 @@
         <init-param>
             <param-name>contextConfigLocation</param-name>
             <param-value>
+                /WEB-INF/root-context.xml,
                 /WEB-INF/spring-mvc-servlet.xml
             </param-value>
         </init-param>
@@ -21,8 +22,6 @@
         <servlet-name>spring-mvc</servlet-name>
         <url-pattern>/</url-pattern>
     </servlet-mapping>
-
-
 
 
 </web-app>
