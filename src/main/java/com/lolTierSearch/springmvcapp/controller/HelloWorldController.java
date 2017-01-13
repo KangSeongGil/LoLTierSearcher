@@ -14,10 +14,10 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class HelloWorldController {
 
-    @RequestMapping(value = "/hello", method = RequestMethod.GET)
-    public String hello( Model model) {
-        model.addAttribute("greeting","안녕하세오 롤 티어 검색기 입니다" );
-        return "hello";
+    @RequestMapping(value = "/hello")
+    public ModelAndView viewHello(Model model) {
+        String message = "안녕하세요 롤 검색기 입니다";
+        return new ModelAndView("hello", "greeting" , message);
     }
 
 }
