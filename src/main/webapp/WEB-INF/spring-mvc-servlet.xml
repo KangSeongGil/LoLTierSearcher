@@ -22,7 +22,7 @@
             Tiles + Velocity configuration using VelocityTools
         -->
     <bean id="tilesConfigurer"
-          class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
+          class="org.springframework.web.servlet.view.tiles2.TilesConfigurer">
         <property name="definitions">
             <list>
                 <value>/WEB-INF/tiles-def.xml</value>
