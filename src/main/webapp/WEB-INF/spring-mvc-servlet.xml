@@ -15,13 +15,13 @@
     <context:component-scan base-package="com.lolTierSearch.springmvcapp.controller.*"/>
 
     <!-- Tell the container that we are going to use annotations -->
+    <context:annotation-config/>
     <mvc:annotation-driven />
 
     <!--
             Tiles + Velocity configuration using VelocityTools
         -->
-    <bean id="tilesConfigurer"
-          class="org.springframework.web.servlet.view.tiles2.TilesConfigurer">
+    <bean id="tilesConfigurer" class="org.springframework.web.servlet.view.tiles2.TilesConfigurer">
         <property name="definitions">
             <list>
                 <value>/WEB-INF/tiles-def.xml</value>
@@ -44,7 +44,6 @@
     <bean id="tilesviewResolver" class="org.springframework.web.servlet.view.tiles3.TilesViewResolver" />
 
     <!-- Tiles ViewResolver -->
-   ]
 
     <!-- Spring MVC
     <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
