@@ -7,9 +7,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 </head>
 <body>
-<tiles:insertAttribute name="header" />
-<tiles:insertAttribute name="body" />
-<tiles:insertAttribute name="footer" />
+안녕
 </body>
 </html>
 
