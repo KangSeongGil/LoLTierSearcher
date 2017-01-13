@@ -12,7 +12,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 
 @Controller
-@RequestMapping(value = "/")
 public class HelloWorldController {
 
     @RequestMapping(value = "/hello", method = RequestMethod.GET)
