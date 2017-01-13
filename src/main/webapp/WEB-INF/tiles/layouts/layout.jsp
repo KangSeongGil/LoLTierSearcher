@@ -8,8 +8,6 @@
 </head>
 <body>
 
-    <tiles:insertAttribute name="body"/>
-
 
 
 </body>
