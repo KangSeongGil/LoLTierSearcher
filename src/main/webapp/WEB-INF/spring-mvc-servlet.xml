@@ -51,6 +51,7 @@
         <property name="definitions">
             <list>
                 <value>/WEB-INF/tiles/tiles.xml</value>
+                <value>/WEB-INF/tiles/view.xml</value>
             </list>
         </property>
     </bean>
