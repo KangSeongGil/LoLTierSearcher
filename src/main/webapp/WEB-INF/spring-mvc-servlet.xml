@@ -20,8 +20,6 @@
         <property name="order" value="1" />
     </bean>
 
-
-    출처: http://multifrontgarden.tistory.com/95 [우리집앞마당]
     <bean id="tilesConfigurer"
           class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
         <property name="definitions">
@@ -30,20 +28,6 @@
             </list>
         </property>
     </bean>
-
-    <!--
-    <bean id="velocityConfig" class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">
-        <property name="resourceLoaderPath">
-            <value>/WEB-INF/velocity/</value>
-        </property>
-        <property name="velocityProperties">
-            <props>
-                <prop key="input.encoding">utf-8</prop>
-                <prop key="output.encoding">utf-8</prop>
-            </props>
-        </property>
-    </bean>
-    -->
 
 
 </beans>
