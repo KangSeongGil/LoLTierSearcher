@@ -3,7 +3,6 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title><tiles:insertAttribute name="title" ignore="true" /></title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 </head>
@@ -15,7 +14,9 @@
         <tiles:insertAttribute name="body" /></div>
     </div>
 </div>
-<div><tiles:insertAttribute name="footer" /></div>
+<div>
+    <tiles:insertAttribute name="footer" />
+</div>
 </body>
 </html>
 
