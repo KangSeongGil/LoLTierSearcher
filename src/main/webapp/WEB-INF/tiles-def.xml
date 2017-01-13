@@ -2,9 +2,9 @@
         "-//Apache Software Foundation//DTD Tiles Configuration 1.3//EN"
         "http://struts.apache.org/dtds/tiles-config_1_3.dtd">
 <tiles-definitions>
-    <definition name="default" template="/WEB-INF/layouts/layout.vm">
-        <put name="header" value="/WEB-INF/fragments/_header.vm"/>
-        <put name="footer" value="/WEB-INF/fragments/_footer.vm"/>
+    <definition name="default" template="/WEB-INF/velocity/layouts/layout.vm">
+        <put name="header" value="/WEB-INF/velocity/fragments/_header.vm"/>
+        <put name="footer" value="/WEB-INF/velocity/fragments/_footer.vm"/>
     </definition>
 
     <definition name="Demo" extends="default">
