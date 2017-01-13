@@ -7,7 +7,11 @@
         <put name="footer" value="/WEB-INF/velocity/fragments/_footer.vm"/>
     </definition>
 
-    <definition name="Demo" extends="default">
+    <definition name="/Demo" extends="default">
+        <put name="body" value="/WEB-INF/views/welcome.vm"/>
+    </definition>
+
+    <definition name="/" extends="default">
         <put name="body" value="/WEB-INF/views/welcome.vm"/>
     </definition>
 </tiles-definitions>

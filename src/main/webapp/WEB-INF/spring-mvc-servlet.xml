@@ -16,6 +16,7 @@
 
     <!-- Tell the container that we are going to use annotations -->
     <context:annotation-config/>
+    <mvc:annotation-driven />
 
     <!--
             Tiles + Velocity configuration using VelocityTools
@@ -30,6 +31,7 @@
     </bean>
 
 
+
     <bean id="velocityConfig" class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">
         <property name="resourceLoaderPath"><value>/WEB-INF/velocity/</value></property>
         <property name="velocityProperties">
@@ -39,6 +41,8 @@
             </props>
         </property>
     </bean>
+
+    <bean id="tilesviewResolver" class="org.springframework.web.servlet.view.tiles3.TilesViewResolver" />
 
     <!-- Tiles ViewResolver -->
     <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
