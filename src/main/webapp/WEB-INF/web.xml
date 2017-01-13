@@ -19,8 +19,13 @@
 
     <servlet-mapping>
         <servlet-name>spring-mvc</servlet-name>
-        <url-pattern>/</url-pattern>
+        <url-pattern>/admin/*</url-pattern>
     </servlet-mapping>
 
 
+    <listener>
+        <listener-class>
+            org.springframework.web.context.ContextLoaderListener
+        </listener-class>
+    </listener>
 </web-app>
