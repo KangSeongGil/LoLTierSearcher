@@ -16,19 +16,11 @@
 
     <!-- Tell the container that we are going to use annotations -->
     <context:annotation-config/>
-    <mvc:annotation-driven />
+    <mvc:default-servlet-handler/>
 
     <!--
             Tiles + Velocity configuration using VelocityTools
         -->
-    <bean id="tilesConfigurer"
-          class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
-        <property name="definitions">
-            <list>
-                <value>/WEB-INF/tiles-def.xml</value>
-            </list>
-        </property>
-    </bean>
 
 
 
@@ -61,7 +53,7 @@
     -->
 
     <!-- Velocity ViewResolver-->
-
+    <!--
     <bean id="viewResolver" class="org.springframework.web.servlet.view.velocity.VelocityViewResolver">
         <property name="cache" value="true" />
         <property name="prefix" value="" />
@@ -71,6 +63,16 @@
         <property name="contentType" value="text/html; charset=UTF-8" />
         <property name="exposeSpringMacroHelpers" value="true" />
         <property name="order" value="1" />
+    </bean>
+    -->
+    <bean id="viewResolver"
+          class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+        <property name="viewClass"
+                  value="org.springframework.web.servlet.view.tiles3.TilesView" />
+        <property name="cache" value="true" />
+        <property name="prefix" value="/WEB-INF/views" />
+        <property name="suffix" value=".vm" />
+        <property name="order" value="3" />
     </bean>
 
 </beans>
