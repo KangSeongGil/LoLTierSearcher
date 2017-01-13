@@ -17,7 +17,7 @@ public class HelloWorldController {
 
     @RequestMapping(value = "/hello", method = RequestMethod.GET)
     public String hello( Model model) {
-        model.addAttribute("greeitng","안녕하세오 롤 티어 검색기 입니다" );
+        model.addAttribute("greeting","안녕하세오 롤 티어 검색기 입니다" );
         return "hello";
     }
 

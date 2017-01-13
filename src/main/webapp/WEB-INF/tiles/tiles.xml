@@ -13,5 +13,4 @@
     <definition name="hello" extends="base.definition">
         <put-attribute name="body" value="/WEB-INF/views/hello.jsp" />
     </definition>
-
 </tiles-definitions>
