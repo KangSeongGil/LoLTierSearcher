@@ -15,7 +15,6 @@
     <context:component-scan base-package="com.lolTierSearch.springmvcapp.controller.*"/>
 
     <!-- Tell the container that we are going to use annotations -->
-    <context:annotation-config/>
     <mvc:annotation-driven />
 
     <!--
