@@ -17,7 +17,7 @@ public class HelloWorldController {
 
     @RequestMapping(method = RequestMethod.GET)
     public ModelAndView helloWorld() {
-        String message = "Hello World, Spring MVC @ Javatpoint";
+        String message = "안녕하세요 롤 티어 검색기 입니다";
         return new ModelAndView("hello", "greeting", message);
     }
 
