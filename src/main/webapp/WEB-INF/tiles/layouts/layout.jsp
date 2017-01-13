@@ -8,15 +8,14 @@
 </head>
 <body>
 
-<div><tiles:insertAttribute name="header" /></div>
-<div class="container">
+    <tiles:insertAttribute name="header"/>
+
     <div style="margin-top: 100px;">
-        <tiles:insertAttribute name="body" /></div>
+        <tiles:insertAttribute name="body"/></div>
     </div>
-</div>
-<div>
-    <tiles:insertAttribute name="footer" />
-</div>
+
+    <tiles:insertAttribute name="footer"/>
+
 </body>
 </html>
 
