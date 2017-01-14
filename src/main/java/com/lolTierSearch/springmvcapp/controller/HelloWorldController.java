@@ -12,9 +12,10 @@ import org.springframework.web.servlet.ModelAndView;
 
 
 @Controller
+@RequestMapping(value = "/")
 public class HelloWorldController {
 
-    @RequestMapping(value = "hello")
+    @RequestMapping(value = "/hello")
     public ModelAndView viewHello(Model model) {
         String message = "안녕하세요 롤 검색기 입니다";
         return new ModelAndView("hello", "greeting" , message);
