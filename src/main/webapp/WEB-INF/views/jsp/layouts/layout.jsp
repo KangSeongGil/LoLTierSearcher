@@ -12,7 +12,8 @@
 <body>
 
 <tile><tiles:insertAttribute name="header"/> </tile>
-
+<tile><tiles:insertAttribute name="body"/> </tile>
+<tile><tiles:insertAttribute name="footer"/> </tile>
 
 </body>
 </html>
