@@ -15,8 +15,7 @@
     <context:annotation-config />
     <context:component-scan base-package="com.lolTierSearch.springmvcapp.controller" />
 
-    <mvc:annotation-driven />
-    <mvc:default-servlet-handler />
+
 
 
     <!--
@@ -40,5 +39,7 @@
             </list>
         </property>
     </bean>
+
+
 
 </beans>
