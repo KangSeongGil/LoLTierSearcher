@@ -10,6 +10,13 @@
         <servlet-class>org.apache.velocity.tools.view.VelocityViewServlet</servlet-class>
 
         <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>
+                /WEB-INF/spring-mvc-servlet.xml
+            </param-value>
+        </init-param>
+
+        <init-param>
             <param-name>org.apache.velocity.toolbox</param-name>
             <param-value>/WEB-INF/tools.xml</param-value>
         </init-param>
@@ -19,12 +26,7 @@
             <param-value>/WEB-INF/velocity.properties</param-value>
         </init-param>
 
-        <init-param>
-            <param-name>contextConfigLocation</param-name>
-            <param-value>
-                /WEB-INF/spring-mvc-servlet.xml
-            </param-value>
-        </init-param>
+
     </servlet>
 
     <servlet-mapping>
