@@ -3,14 +3,14 @@
         "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
         "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
 <tiles-definitions>
-    <definition name="DefaultTemplate" template="/WEB-INF/views/jsp/layouts/layout.jsp">
-        <put-attribute name="header" value="/WEB-INF/views/jsp/templates/header.jsp" />
-        <put-attribute name="body" value=""/>
-        <put-attribute name="footer" value="/WEB-INF/views/jsp/templates/footer.jsp" />
+    <definition name="DefaultTemplate" template="/WEB-INF/views/vm/layouts/layout.vm">
+        <put-attribute name="header" value="/WEB-INF/views/vm/templates/header.vm" type="velocity" />
+        <put-attribute name="body" value="" type="velocity" />
+        <put-attribute name="footer" value="/WEB-INF/views/vm/templates/footer.vm" type="velocity"/>
     </definition>
 
     <definition name="hello" extends="DefaultTemplate">
-        <put-attribute name="body" value="/WEB-INF/views/hello.jsp"/>
+        <put-attribute name="body" value="/WEB-INF/views/hello.vm" type="velocity"/>
     </definition>
 
 
