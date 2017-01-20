@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
        xmlns:tx="http://www.springframework.org/schema/tx" xmlns:p="http://www.springframework.org/schema/p"
        xmlns:mvc="http://www.springframework.org/schema/mvc"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
@@ -12,36 +13,30 @@
     http://www.springframework.org/schema/tx
     http://www.springframework.org/schema/tx/spring-tx-3.2.xsd">
 
-    <context:annotation-config />
-    <context:component-scan base-package="com.lolTierSearch.springmvcapp.controller" />
+    <context:annotation-config/>
+    <context:component-scan base-package="com.lolTierSearch.springmvcapp.controller"/>
 
 
-
+     <!--
+     This bean sets up the Velocity environment for us based on a root path for templates.
+     Optionally, a properties file can be specified for more control over the Velocity
+     environment, but the defaults are pretty sane for file based template loading.
+     -->
+    <bean id="velocityConfig" class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">
+        <property name="resourceLoaderPath" value="/WEB-INF/views/vm"/>
+    </bean>
 
     <!--
-    <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver" >
-        <property name="prefix" value="/WEB-INF/views/"/>
-        <property name="suffix" value=".jsp"/>
-    </bean>
-    <bean class="org.springframework.web.servlet.view.UrlBasedViewResolver"
-        id="tilesViewResolver">
-        <property name="viewClass"
-            value="org.springframework.web.servlet.view.tiles3.TilesView" />
-    </bean>
+
+      View resolvers can also be configured with ResourceBundles or XML files. If you need
+      different view resolving based on Locale, you have to use the resource bundle resolver.
+
     -->
-
-
-
-    <bean id="viewResolver" class="org.springframework.web.servlet.view.tiles3.TilesViewResolver"/>
-
-    <bean id="tilesConfigurer" class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
-        <property name="definitions">
-            <list>
-                <value>/WEB-INF/tiles.xml</value>
-            </list>
-        </property>
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.velocity.VelocityViewResolver">
+        <property name="cache" value="true"/>
+        <property name="prefix" value=""/>
+        <property name="suffix" value=".vm"/>
     </bean>
-
 
 
 </beans>
