@@ -17,13 +17,22 @@
 
 
     <bean id="velocityConfig" class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">
-        <property name="resourceLoaderPath" value="/"/>
+        <property name="resourceLoaderPath">
+            <value>/</value>
+        </property>
+        <property name="velocityProperties">
+            <props>
+                <prop key="input.encoding">utf-8</prop>
+                <prop key="output.encoding">utf-8</prop>
+            </props>
+        </property>
     </bean>
 
 
     <bean id="viewResolver" class="org.springframework.web.servlet.view.velocity.VelocityLayoutViewResolver">
         <property name="cache" value="true" />
-        <property name="prefix" value="/WEB-INF/views/vm/layout" />
+        <property name="prefix" value="/WEB-INF/views/vm" />
+        <property name="layoutUrl" value="/WEB-INF/views/vm/layouts/layout.vm" />
         <property name="suffix" value=".vm" />
         <property name="contentType"><value>text/html; charset=utf-8</value></property>
     </bean>
