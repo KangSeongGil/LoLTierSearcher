@@ -33,7 +33,8 @@
 
     <bean id="viewResolver" class="org.springframework.web.servlet.view.velocity.VelocityLayoutViewResolver">
         <property name="cache" value="true" />
-        <property name="prefix" value="/WEB-INF/views/vm/" />
+        <property name="layoutUrl" value="/WEB-INF/tiles.xml" />
+        <property name="prefix" value="/WEB-INF/views/vm/interface" />
         <property name="suffix" value=".vm" />
         <property name="contentType"><value>text/html; charset=utf-8</value></property>
     </bean>
