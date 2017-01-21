@@ -36,12 +36,13 @@
     </bean>
 
 
-    <bean id="viewResolver" class="org.springframework.web.servlet.view.velocity.VelocityLayoutViewResolver">
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.velocity.VelocityViewResolver">
         <property name="cache" value="true" />
         <property name="prefix" value="" />
         <property name="exposeSpringMacroHelpers" value="true" />
         <property name="order" value="1"></property>
         <property name="contentType" value="text/html; charset=utf-8"></property>
+        <property name="toolboxConfigLocation" value="WEB-INF/tools.xml"></property>
         <property name="suffix" value=".vm" />
     </bean>
 
