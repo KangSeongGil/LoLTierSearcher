@@ -11,7 +11,7 @@
     </definition>
 
     <definition name="hello" extends="DefaultTemplate">
-        <put-attribute name="body" value="/WEB-INF/views/hello.vm" type="velocity"/>
+        <put-attribute name="body" value="/WEB-INF/views/vm/interface/hello.vm" type="velocity"/>
     </definition>
 </tiles-definitions>
 
