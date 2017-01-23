@@ -11,12 +11,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 
 @Controller
-
+@RequestMapping("/")
 public class DataController {
 
     @RequestMapping(method = RequestMethod.GET)
     public String sayHello(Model model) {
-        return "/WEB-INF/views/index.vm";
+        model.addAttribute("greeting", "안녕하세요 롤 티어 검색기 입니다");
+        return "index";
     }
 
 }
