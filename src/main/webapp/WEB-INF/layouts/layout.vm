@@ -5,7 +5,7 @@
     <title>LoL Tier Seach</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-</head>
+    <link rel = "stylesheet" type = "text/css" href = "resource/css/Common.css">
 <body>
 
     #parse("/WEB-INF/fragments/_header.vm")

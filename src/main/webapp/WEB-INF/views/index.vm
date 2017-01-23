@@ -1,6 +1,7 @@
 
 
-<div class="row">
+<div class="row" style="width:50px; height:50px;
+            background-color:#ffd700; margin:0 auto;">
     <div class="col-lg-6">
         <div class="input-group">
       <span class="input-group-btn">
