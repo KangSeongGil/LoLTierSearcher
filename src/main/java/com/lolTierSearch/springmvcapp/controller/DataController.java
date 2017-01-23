@@ -16,7 +16,7 @@ public class DataController {
 
     @RequestMapping(method = RequestMethod.GET)
     public String sayHello(Model model) {
-        model.addAttribute("greeting", "안녕하세요 롤 티어 검색기 입니다");
+        model.addAttribute("greeting", "안녕");
         return "/WEB-INF/views/index.vm";
     }
 
