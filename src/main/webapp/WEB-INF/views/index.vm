@@ -1,7 +1,7 @@
 
 
 <div class="input-group input-group-lg">
-    <span class="input-group-addon" id="sizing-addon1">${button1}</span>
-    <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon1">
+    <span class="input-group-addon" id="sizing-addon1">검색</span>
+    <input type="text" class="form-control" placeholder="소환사 Name" aria-describedby="sizing-addon1">
 </div>
 
