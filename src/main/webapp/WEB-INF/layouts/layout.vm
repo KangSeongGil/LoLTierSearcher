@@ -1,20 +1,20 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles" %>
-
 <!DOCTYPE HTML>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>HelloWorld page</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-
 </head>
 <body>
 
-     #parse($tiles.getAttribute("header"))
-     #parse($tiles.getAttribute("body"))
-     #parse($tiles.getAttribute("footer"))
-
+    #parse("/WEB-INF/fragments/_header.vm")
+    <div class="container">
+        <div style="margin-top: 100px;">
+            $screen_content
+        </div>
+    </div>
+    #parse("/WEB-INF/fragments/_footer.vm")
 </body>
 </html>
 
