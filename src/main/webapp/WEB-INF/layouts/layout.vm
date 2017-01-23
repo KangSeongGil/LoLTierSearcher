@@ -5,14 +5,12 @@
     <title>LoL Tier Seach</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-    <link rel = "stylesheet" type = "text/css" href = "resource/css/Common.css">
+    <link rel="stylesheet" type="text/css" href="resource/css/Common.css">
 <body>
 
     #parse("/WEB-INF/fragments/_header.vm")
-    <div class="container">
-        <div style="margin-top: 100px; ">
-            $screen_content
-        </div>
+    <div class="container" style="margin-top: 100px; ">
+        $screen_content
     </div>
     #parse("/WEB-INF/fragments/_footer.vm")
 </body>
