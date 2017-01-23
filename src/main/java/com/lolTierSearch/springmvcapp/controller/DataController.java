@@ -16,7 +16,7 @@ public class DataController {
 
     @RequestMapping(method = RequestMethod.GET)
     public String sayHello(Model model) {
-        model.addAttribute("greeting", "안녕");
+
         return "/WEB-INF/views/index.vm";
     }
 
