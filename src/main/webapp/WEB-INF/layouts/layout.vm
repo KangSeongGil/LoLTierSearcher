@@ -10,7 +10,7 @@
 
     #parse("/WEB-INF/fragments/_header.vm")
     <div class="container">
-        <div style="margin-top: 100px; text-align:center; ">
+        <div style="margin-top: 100px; ">
             $screen_content
         </div>
     </div>
