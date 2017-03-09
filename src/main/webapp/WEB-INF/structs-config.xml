@@ -18,16 +18,7 @@
     <context:annotation-config/>
 
 
-    <bean id="viewResolver"
-          class="org.springframework.web.servlet.view.velocity.VelocityLayoutViewResolver">
-        <property name="cache" value="true"/>
-        <property name="prefix" value=""/>
-        <property name="suffix" value=".vm"/>
-        <property name="order" value="1"/>
-        <property name="contentType">
-            <value>text/html; charset=utf-8</value>
-        </property>
-    </bean>
+
 
     <bean id="velocityConfig"
           class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">
@@ -46,18 +37,22 @@
     </bean>
 
 
-    <!-- Tiles viewResolver -->
-    <bean id="tilesViewResolver" class="org.springframework.web.servlet.view.UrlBasedViewResolver">
-        <property name="viewClass" value="org.springframework.web.servlet.view.tiles3.TilesView"/>
+    <bean id="viewResolver"
+          class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+        <property name="viewClass">
+            <value>
+                org.springframework.web.servlet.view.tiles3.TilesView
+            </value>
+        </property>
     </bean>
 
-    <bean id="tilesConfigurer" class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
+    <bean id="tilesConfigurer"
+          class="org.springframework.web.servlet.view.tiles2.TilesConfigurer">
         <property name="definitions">
             <list>
                 <value>/WEB-INF/tiles-defs.xml</value>
             </list>
         </property>
     </bean>
-
 
 </beans>
