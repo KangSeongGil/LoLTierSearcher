@@ -78,6 +78,20 @@
             <version>2.0</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/org.apache.tiles/tiles-template -->
+        <dependency>
+            <groupId>org.apache.tiles</groupId>
+            <artifactId>tiles-template</artifactId>
+            <version>3.0.7</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.tiles/tiles-velocity -->
+        <dependency>
+            <groupId>org.apache.tiles</groupId>
+            <artifactId>tiles-velocity</artifactId>
+            <version>3.0.7</version>
+        </dependency>
+
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
