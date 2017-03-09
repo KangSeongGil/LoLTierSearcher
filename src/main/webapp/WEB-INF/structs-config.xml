@@ -18,11 +18,10 @@
     <context:annotation-config/>
 
 
-
-
-
     <bean id="viewResolver"
           class="org.springframework.web.servlet.view.velocity.VelocityLayoutViewResolver">
+        <property name="cache" value="true"/>
+        <property name="prefix" value=""/>
         <property name="suffix" value=".vm"/>
         <property name="order" value="1"/>
         <property name="contentType">
@@ -32,9 +31,8 @@
 
     <bean id="velocityConfig"
           class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">
-        <property name="resourceLoaderPath">
-            <value>/WEB-INF/views/</value>
-        </property>
+        <property name="resourceLoaderPath" value="/WEB-INF/UI"/>
+
         <property name="velocityProperties">
             <props>
                 <prop key="input.encoding">utf-8</prop>
@@ -42,6 +40,11 @@
             </props>
         </property>
     </bean>
+
+    <bean id="velocityEngine" class="org.springframework.ui.velocity.VelocityEngineFactoryBean">
+        <property name="configLocation" value="/WEB-INF/velocity.properties"/>
+    </bean>
+
 
     <!-- Tiles viewResolver -->
     <bean id="tilesViewResolver" class="org.springframework.web.servlet.view.UrlBasedViewResolver">
@@ -55,7 +58,6 @@
             </list>
         </property>
     </bean>
-
 
 
 </beans>
