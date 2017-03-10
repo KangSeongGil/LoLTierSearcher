@@ -32,14 +32,13 @@
     </bean>
 
     <bean id="viewResolver" class="org.springframework.web.servlet.view.velocity.VelocityViewResolver">
-        <property name="cache" value="false" />
-        <property name="prefix" value="/WEB-INF/UI/" />
+        <property name="cache" value="true" />
+        <property name="prefix" value="/WEB-INF/UI/views" />
         <property name="exposeSpringMacroHelpers" value="true" />
         <property name="exposeRequestAttributes" value="true" />
         <property name="exposeSessionAttributes" value="true" />
         <property name="allowRequestOverride" value="true" />
         <property name="allowSessionOverride" value="true" />
-        <property name="order" value="1"></property>
         <property name="contentType" value="text/html; charset=utf-8"></property>
         <property name="toolboxConfigLocation" value="/WEB-INF/toolbox.xml" />
         <property name="suffix" value=".vm" />
