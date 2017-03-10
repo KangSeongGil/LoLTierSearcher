@@ -23,36 +23,27 @@
     <bean id="velocityConfig"
           class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">
         <property name="resourceLoaderPath" value="/WEB-INF/UI"/>
-
-        <property name="velocityProperties">
-            <props>
-                <prop key="input.encoding">utf-8</prop>
-                <prop key="output.encoding">utf-8</prop>
-            </props>
-        </property>
-    </bean>
-
-    <bean id="velocityEngine" class="org.springframework.ui.velocity.VelocityEngineFactoryBean">
         <property name="configLocation" value="/WEB-INF/velocity.properties"/>
     </bean>
 
-
-    <bean id="viewResolver"
-          class="org.springframework.web.servlet.view.UrlBasedViewResolver">
-        <property name="viewClass">
-            <value>
-                org.springframework.web.servlet.view.tiles3.TilesView
-            </value>
-        </property>
+    <bean id="tilesConfig" class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
+        <property name="completeAutoload" value="true"/>
+        <property name="definitions" value="/WEB-INF/tiles-defs.xml"/>
     </bean>
 
-    <bean id="tilesConfigurer"
-          class="org.springframework.web.servlet.view.tiles2.TilesConfigurer">
-        <property name="definitions">
-            <list>
-                <value>/WEB-INF/tiles-defs.xml</value>
-            </list>
-        </property>
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.velocity.VelocityViewResolver">
+        <property name="cache" value="false" />
+        <property name="prefix" value="/WEB-INF/UI/" />
+        <property name="exposeSpringMacroHelpers" value="true" />
+        <property name="exposeRequestAttributes" value="true" />
+        <property name="exposeSessionAttributes" value="true" />
+        <property name="allowRequestOverride" value="true" />
+        <property name="allowSessionOverride" value="true" />
+        <property name="order" value="1"></property>
+        <property name="contentType" value="text/html; charset=utf-8"></property>
+        <property name="toolboxConfigLocation" value="/WEB-INF/toolbox.xml" />
+        <property name="suffix" value=".vm" />
+        <property name="viewClass" value="org.springframework.web.servlet.view.velocity.VelocityToolboxView" />
     </bean>
 
 </beans>
