@@ -5,17 +5,10 @@
 
     <servlet>
         <servlet-name>velocity</servlet-name>
-        <servlet-class>org.apache.velocity.tools.view.VelocityViewServlet</servlet-class>
-
-        <init-param>
-            <param-name>org.apache.velocity.toolbox</param-name>
-            <param-value>/WEB-INF/tools.xml</param-value>
-        </init-param>
-
-        <init-param>
-            <param-name>org.apache.velocity.properties</param-name>
-            <param-value>/WEB-INF/velocity.properties</param-value>
-        </init-param>
+        <servlet-class>
+            org.springframework.web.servlet.DispatcherServlet
+        </servlet-class>
+        <load-on-startup>1</load-on-startup>
     </servlet>
 
     <servlet-mapping>
@@ -31,5 +24,8 @@
     </context-param>
 
 
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
 
 </web-app>
