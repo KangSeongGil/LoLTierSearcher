@@ -10,7 +10,7 @@
     </definition>
 
     <definition name="/index" extends="main_base">
-        <put name="central" value="/WEB-INF/UI/views/index.vm"/>
+        <put name="center" value="/WEB-INF/UI/views/index.vm"/>
     </definition>
 
 </tiles-definitions>

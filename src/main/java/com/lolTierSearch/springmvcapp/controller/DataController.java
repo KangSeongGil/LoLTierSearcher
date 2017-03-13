@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 @RequestMapping("/")
+
 public class DataController {
 
     @RequestMapping(method = RequestMethod.GET)

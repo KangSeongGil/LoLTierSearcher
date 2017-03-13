@@ -14,9 +14,11 @@
     <link rel="stylesheet" type="text/css" href="resource/css/Common.css">
 <body>
 
-    #parse($tiles.getAttribute("header"))
-    #parse($tiles.getAttribute("center"))
-    #parse($tiles.getAttribute("footer"))
+
+
+    #tiles_insertTemplate({"name": "header"})
+    #tiles_insertTemplate({"name": "center"})
+    #tiles_insertTemplate({"name": "footer"})
 
 </body>
 </html>
