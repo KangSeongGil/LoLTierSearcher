@@ -9,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.portlet.ModelAndView;
 
 
 @Controller
@@ -17,11 +18,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class DataController {
 
     @RequestMapping(value="/index", method = RequestMethod.GET)
-    public String sayHello(Model model) {
+    public ModelAndView sayHello(Model model) {
         RestfulClient rankingGetter = new  RestfulClient();
         String ranking = rankingGetter.getTotalRanking();
         model.addAttribute("rank", ranking);
-        return "index";
+        return new ModelAndView("index","rank",ranking);
     }
 
 }
+
+
