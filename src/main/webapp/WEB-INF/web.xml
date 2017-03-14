@@ -7,12 +7,14 @@
 
     <servlet>
         <servlet-name>velocity</servlet-name>
-        <servlet-class>org.apache.velocity.tools.view.VelocityViewServlet</servlet-class>
-
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
         <init-param>
-            <param-name>org.apache.velocity.properties</param-name>
-            <param-value>/WEB-INF/velocity.properties</param-value>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>
+                /WEB-INF/structs-config.xml
+            </param-value>
         </init-param>
+        <load-on-startup>1</load-on-startup>
     </servlet>
 
     <servlet-mapping>
@@ -20,11 +22,8 @@
         <url-pattern>/</url-pattern>
     </servlet-mapping>
 
-    <context-param>
-        <param-name>contextConfigLocation</param-name>
-        <param-value>
-            /WEB-INF/structs-config.xml
-        </param-value>
-    </context-param>
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
 
 </web-app>

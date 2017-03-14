@@ -12,38 +12,30 @@
 
 
     <!-- Register the annotated components in the container eg : annotated controllers -->
-    <context:component-scan base-package="com.lolTierSearch.springmvcapp.controller"/>
+    <context:component-scan base-package="com.lolTierSearch.springmvcapp"/>
 
     <!-- Tell the container that we are going to use annotations -->
     <mvc:annotation-driven />
 
-    <bean id="tilesConfigurer" class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
-        <property name="preparerFactoryClass" value="org.apache.struts.tiles3.xmlDefinition.I18nFactorySet"/>
+    <bean id="velocityTilesInitializer" class="sk.openhouse.web.VelocityTilesInitializer">
+        <property name="veolocityToolbox" value="velocity/tools.xml" />
+        <property name="veolocityProperties" value="velocity/velocity.properties" />
         <property name="definitions">
             <list>
-                <value>/WEB-INF/tiles-defs.xml</value>
+                <value>/WEB-INF/views/main-tiles.xml</value>
             </list>
         </property>
     </bean>
 
-    <bean id="velocityConfig" class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">
-        <property name="resourceLoaderPath" value="/WEB-INF/UI" />
-        <property name="velocityProperties">
-            <props>
-                <prop key="input.encoding">utf-8</prop>
-                <prop key="output.encoding">utf-8</prop>
-            </props>
-        </property>
+    <!-- tiles config with velocityTiles initializer -->
+    <bean id="tilesConfigurer" class="org.springframework.web.servlet.view.tiles2.TilesConfigurer">
+        <property name="tilesInitializer" ref="velocityTilesInitializer" />
     </bean>
 
-    <bean id="viewResolver" class="org.springframework.web.servlet.view.velocity.VelocityViewResolver">
-        <property name="cache" value="true" />
-        <property name="prefix" value="" />
-        <property name="exposeSpringMacroHelpers" value="true" />
-        <property name="order" value="1"></property>
-        <property name="contentType" value="text/html; charset=utf-8"></property>
-        <property name="toolboxConfigLocation" value="/WEB-INF/tools.xml"></property>
-        <property name="suffix" value=".vm" />
-        <property name="viewClass" value="com.lolTierSearch.springmvcapp.viewConfig.VelocityTilesView" />
+    <!-- tiles view -->
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+        <property name="viewClass" value="sk.openhouse.web.VelocityTilesView" />
+        <property name="contentType" value="text/html;charset=UTF-8" />
     </bean>
+
 </beans>
