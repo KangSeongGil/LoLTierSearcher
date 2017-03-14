@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 public class DataController {
 
-    @RequestMapping(method = RequestMethod.GET)
+    @RequestMapping(value="/index", method = RequestMethod.GET)
     public String sayHello(Model model) {
         RestfulClient rankingGetter = new  RestfulClient();
         String ranking = rankingGetter.getTotalRanking();
