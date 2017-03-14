@@ -40,9 +40,10 @@
         <property name="cache" value="true" />
         <property name="prefix" value="" />
         <property name="exposeSpringMacroHelpers" value="true" />
-        <property name="suffix" value=".tile" />
         <property name="order" value="1"></property>
         <property name="contentType" value="text/html; charset=utf-8"></property>
         <property name="toolboxConfigLocation" value="/WEB-INF/tools.xml"></property>
+        <property name="suffix" value=".vm" />
+        <property name="viewClass" value="com.lolTierSearch.springmvcapp.viewConfig.VelocityTilesView" />
     </bean>
 </beans>
