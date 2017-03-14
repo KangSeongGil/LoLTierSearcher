@@ -9,22 +9,19 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.portlet.ModelAndView;
+import org.springframework.web.servlet.ModelAndView;
 
 
 @Controller
 @RequestMapping("/")
-
 public class DataController {
 
-    @RequestMapping(value="/index", method = RequestMethod.GET)
+    @RequestMapping(value = "/hello", method = RequestMethod.GET)
     public ModelAndView sayHello(Model model) {
-        RestfulClient rankingGetter = new  RestfulClient();
+        RestfulClient rankingGetter = new RestfulClient();
         String ranking = rankingGetter.getTotalRanking();
-        model.addAttribute("rank", ranking);
-        return new ModelAndView("index","rank",ranking);
+
+        return new ModelAndView("index","rank", ranking);
     }
 
 }
-
-
