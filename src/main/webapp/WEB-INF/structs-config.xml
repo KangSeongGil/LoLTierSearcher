@@ -17,23 +17,32 @@
     <!-- Tell the container that we are going to use annotations -->
     <mvc:annotation-driven />
 
-
-
-
-    <bean id="velocityConfig"
-          class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">
-        <property name="resourceLoaderPath" value="/WEB-INF/UI"/>
-        <property name="configLocation" value="/WEB-INF/velocity.properties"/>
+    <bean id="tilesConfigurer" class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
+        <property name="preparerFactoryClass" value="org.apache.struts.tiles3.xmlDefinition.I18nFactorySet"/>
+        <property name="definitions">
+            <list>
+                <value>/WEB-INF/tiles-defs.xml</value>
+            </list>
+        </property>
     </bean>
 
-
+    <bean id="velocityConfig" class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">
+        <property name="resourceLoaderPath" value="/WEB-INF/UI" />
+        <property name="velocityProperties">
+            <props>
+                <prop key="input.encoding">utf-8</prop>
+                <prop key="output.encoding">utf-8</prop>
+            </props>
+        </property>
+    </bean>
 
     <bean id="viewResolver" class="org.springframework.web.servlet.view.velocity.VelocityViewResolver">
-        <property name="cache" value="true" />>
+        <property name="cache" value="true" />
+        <property name="prefix" value="" />
+        <property name="exposeSpringMacroHelpers" value="true" />
+        <property name="order" value="1"></property>
         <property name="contentType" value="text/html; charset=utf-8"></property>
-        <property name="toolboxConfigLocation" value="/WEB-INF/toolbox.xml" />
-        <property name="suffix" value=".vm" />
-        <property name="viewClass" value="org.springframework.web.servlet.view.velocity.VelocityToolboxView" />
+        <property name="toolboxConfigLocation" value="/WEB-INF/tools.xml"></property>
+        <property name="suffix" value=".tile" />
     </bean>
-
 </beans>
