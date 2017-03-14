@@ -16,12 +16,12 @@ import org.springframework.web.servlet.ModelAndView;
 @RequestMapping("/")
 public class DataController {
 
-    @RequestMapping(value = "/hello", method = RequestMethod.GET)
-    public ModelAndView sayHello(Model model) {
+    @RequestMapping(value = "/index", method = RequestMethod.GET)
+    public String sayHello(Model model) {
         RestfulClient rankingGetter = new RestfulClient();
         String ranking = rankingGetter.getTotalRanking();
-
-        return new ModelAndView("index","rank", ranking);
+        model.addAttribute("rank", ranking);
+        return "index";
     }
 
 }
