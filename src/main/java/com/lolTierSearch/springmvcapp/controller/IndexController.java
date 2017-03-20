@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/")
 public class IndexController {
 
-    @RequestMapping("/main")
     public String indexHandler(ModelMap model) {
         return "/WEB-INF/views/index_velocity";
     }
