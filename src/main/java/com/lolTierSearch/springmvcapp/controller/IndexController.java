@@ -13,7 +13,7 @@ public class IndexController {
 
     @RequestMapping("/")
     public ModelAndView indexHandler(ModelMap model) {
-        String message = "안녕하세요 롤 검색기 입니다";
+        String message = "Hello LoL Tier Seacher";
         return new ModelAndView("index_velocity", "greeting" , message);
     }
 }
