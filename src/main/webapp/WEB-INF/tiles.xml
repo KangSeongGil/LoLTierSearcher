@@ -9,7 +9,7 @@
         <put-attribute name="footer" value="/WEB-INF/views/fragments/_footer.vm" />
     </definition>
 
-    <definition name="hello" extends="DefaultTemplate">
+    <definition name="/main" extends="DefaultTemplate">
         <put-attribute name="body" value="/WEB-INF/views/index_velocity.vm"/>
     </definition>
 

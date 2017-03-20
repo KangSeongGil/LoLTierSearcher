@@ -1,5 +1,4 @@
-#set($dollar = '$')
-#set($hash = '#')
+
 
 <!DOCTYPE html>
 <html>
@@ -10,7 +9,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
     <link rel="stylesheet" type="text/css" href="resource/css/Common.css">
 <body>
-
     #parse($tiles.getAttribute("header"))
     #parse($tiles.getAttribute("body"))
     #parse($tiles.getAttribute("footer"))
