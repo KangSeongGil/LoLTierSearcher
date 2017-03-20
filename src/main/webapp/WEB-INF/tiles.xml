@@ -8,7 +8,7 @@
         <put name="footer" value="/WEB-INF/views/fragments/_footer.vm" />
     </definition>
 
-    <definition name="/index" extends="main_base">
+    <definition name="/main" extends="main_base">
         <put name="center" value="/WEB-INF/views/index_velocity.vm" />
     </definition>
 

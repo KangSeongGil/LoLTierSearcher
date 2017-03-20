@@ -155,6 +155,6 @@
                 </plugin>
             </plugins>
         </pluginManagement>
-        <finalName>index</finalName>
+        <finalName>main</finalName>
     </build>
 </project>
