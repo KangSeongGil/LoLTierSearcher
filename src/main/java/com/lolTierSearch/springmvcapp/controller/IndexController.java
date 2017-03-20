@@ -8,9 +8,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * Created by KangSeongGil on 2017. 3. 15..
  */
 @Controller
+@RequestMapping("/")
 public class IndexController {
 
-    @RequestMapping("/")
+    @RequestMapping("/main")
     public String indexHandler(ModelMap model) {
         return "/WEB-INF/views/index_velocity";
     }
