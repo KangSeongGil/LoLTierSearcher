@@ -3,6 +3,7 @@ package com.lolTierSearch.springmvcapp.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 /**
  * Created by KangSeongGil on 2017. 3. 15..
@@ -11,7 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class IndexController {
 
     @RequestMapping("/")
-    public String indexHandler(ModelMap model) {
-        return "index_velocity";
+    public ModelAndView indexHandler(ModelMap model) {
+        String message = "안녕하세요 롤 검색기 입니다";
+        return new ModelAndView("index_velocity", "greeting" , message);
     }
 }
