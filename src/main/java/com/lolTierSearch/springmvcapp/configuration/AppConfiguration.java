@@ -34,8 +34,7 @@ public class AppConfiguration implements ApplicationContextAware {
     public VelocityConfig velocityConfig() {
         VelocityConfigurer cfg = new VelocityConfigurer();
         cfg.setResourceLoaderPath("/WEB-INF/views/");
-        cfg.setConfigLocation(context
-                .getResource("/WEB-INF/resource/velocity/velocity.properties"));
+        cfg.setConfigLocation(context.getResource("/WEB-INF/resource/velocity/velocity.properties"));
 
         Properties properties = new Properties();
         properties.setProperty("input.encoding", "UTF-8");
