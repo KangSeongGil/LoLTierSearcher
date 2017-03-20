@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class IndexController {
 
-    @RequestMapping("/main")
+    @RequestMapping("/main.html")
     public String indexHandler(ModelMap model) {
         return "/WEB-INF/views/index_velocity";
     }
