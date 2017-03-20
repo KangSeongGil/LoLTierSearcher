@@ -12,6 +12,6 @@ public class IndexController {
 
     @RequestMapping("/")
     public String indexHandler(ModelMap model) {
-        return "/WEB-INF/views/index_velocity";
+        return "index_velocity";
     }
 }
