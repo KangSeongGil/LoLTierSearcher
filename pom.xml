@@ -131,7 +131,6 @@
             <artifactId>jcl-over-slf4j</artifactId>
             <version>1.6.4</version>
         </dependency>
-
     </dependencies>
 
 
