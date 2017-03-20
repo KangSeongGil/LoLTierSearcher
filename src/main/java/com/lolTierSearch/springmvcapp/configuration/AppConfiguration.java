@@ -47,6 +47,7 @@ public class AppConfiguration implements ApplicationContextAware {
     public TilesConfigurer tilesConfigurer() {
         TilesConfigurer cfg = new TilesConfigurer();
         cfg.setTilesInitializer(new VelocityTilesInitializer(velocityConfig()));
+        cfg.setDefinitions("/WEB-INF/tiles.xml");
         return cfg;
     }
 
