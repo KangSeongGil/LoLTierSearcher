@@ -11,9 +11,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
     <link rel="stylesheet" type="text/css" href="resource/css/Common.css">
 <body>
-    ${dollar}tiles.insertAttribute({"name":"header"})
-    ${dollar}tiles.insertAttribute({"name":"center"})
-    ${dollar}tiles.insertAttribute({"name":"footer"})
+    #parse($tiles.getAttribute("header"))
+    #parse($tiles.getAttribute("center"))
+    #parse($tiles.getAttribute("footer"))
 </body>
 </html>
 
