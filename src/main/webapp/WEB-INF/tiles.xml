@@ -1,17 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?>
+
 <!DOCTYPE tiles-definitions PUBLIC
-        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
-        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+        "-//Apache Software Foundation//DTD Tiles Configuration 1.3//EN"
+        "http://struts.apache.org/dtds/tiles-config_1_3.dtd">
 <tiles-definitions>
-    <definition name="DefaultTemplate" template="/WEB-INF/views/layouts/layout.vm">
-        <put-attribute name="header" value="/WEB-INF/views/fragments/_header.vm" />
-        <put-attribute name="body" value=""/>
-        <put-attribute name="footer" value="/WEB-INF/views/fragments/_footer.vm" />
+    <definition name="main_base" page="/WEB-INF/views/layouts/layout.vm">
+        <put name="header" value="/WEB-INF/views/fragments/_header.vm" />
+        <put name="body" value="" />
+        <put name="footer" value="/WEB-INF/views/fragments/_footer.vm" />
     </definition>
 
-    <definition name="/" extends="DefaultTemplate">
-        <put-attribute name="body" value="/WEB-INF/views/index_velocity.vm"/>
+    <definition name="/" extends="main_base">
+        <put name="body" value="views/index_velocity.vm" />
     </definition>
-
 
 </tiles-definitions>
