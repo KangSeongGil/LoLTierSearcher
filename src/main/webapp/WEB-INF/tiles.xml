@@ -9,7 +9,7 @@
         <put name="footer" value="/WEB-INF/views/fragments/_footer.vm" />
     </definition>
 
-    <definition name="/" extends="main_base">
+    <definition name="/gmain" extends="main_base">
         <put name="body" value="views/index_velocity.vm" />
     </definition>
 
