@@ -10,7 +10,7 @@
     </definition>
 
     <definition name="/main" extends="main_base">
-        <put name="body" value="views/index_velocity.vm" />
+        <put name="body" value="/WEB-INF/views/index_velocity.vm" />
     </definition>
 
 </tiles-definitions>
