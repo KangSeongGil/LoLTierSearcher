@@ -1,1 +1,11 @@
-<h1>${greeting}</h1>
+
+
+
+#tiles_insertTemplate({"template":"/WEB-INF/views/layouts/layout.vm"})
+    #tiles_putAttribute({"name":"header",})
+        #parse("/WEB-INF/views/fragments/_header.vm")
+    #end
+    #tiles_putAttribute({"name":"footer"})
+        #parse("/WEB-INF/views/fragments/_footer.vm")
+    #end
+#end

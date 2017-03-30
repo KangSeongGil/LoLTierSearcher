@@ -104,7 +104,7 @@ public class ContextPassingVelocityAttributeRenderer extends
                                 TilesRequestContext request) {
         if (value instanceof String) {
             String string = (String) value;
-            return string.startsWith("/");
+            return string.startsWith("/") && string.endsWith(".vm");
         }
         return false;
     }
