@@ -1,5 +1,4 @@
-#set($dollar = '$')
-#set($hash = '#')
+
 
 <!DOCTYPE html>
 <html>
