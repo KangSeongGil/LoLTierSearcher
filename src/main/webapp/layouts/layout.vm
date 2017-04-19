@@ -1,16 +1,19 @@
-
-
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>LoL Tier Seach</title>
+    <title>HelloWorld page</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" type="text/css" href="resource/css/Common.css">
+</head>
 <body>
-    #tiles_insertAttribute({"name":"header"})#end
-    #tiles_insertAttribute({"name":"footer"})#end
+
+    #parse("/WEB-INF/fragments/_header.vm")
+<div class="container">
+    <div style="margin-top: 100px;">
+        $screen_content
+    </div>
+</div>
+    #parse("/WEB-INF/fragments/_footer.vm")
 </body>
 </html>
-
