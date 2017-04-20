@@ -1,3 +1,12 @@
 
 
-<h1>${greeting}</h1>
+<div class="row" style="margin-top: 100px";>
+    <div class="col-md-6 col-md-offset-3" >
+        <div class="input-group">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button">Tier Seach</button>
+      </span>
+            <input type="text" class="form-control" placeholder="Search for...">
+        </div><!-- /input-group -->
+    </div><!-- /.col-lg-6 -->
+</div>gi
