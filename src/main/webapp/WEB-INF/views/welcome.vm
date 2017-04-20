@@ -1,8 +1,6 @@
-<div class="row" style="margin-top: 100px" ;>
-    <form class="form-inline" class="col-md-4">
-        <div class="form-group">
-            <input type="text" class="form-control" id="exampleInputName2" placeholder="ID">
-        </div>
-        <button type="submit" class="btn btn-default">검색</button>
-    </form>
-</div>
+<form class="form-inline" class="col-md-4">
+    <div class="form-group">
+        <input type="text" class="form-control" id="exampleInputName2" placeholder="ID">
+    </div>
+    <button type="submit" class="btn btn-default">검색</button>
+</form>
