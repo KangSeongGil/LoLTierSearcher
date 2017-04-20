@@ -1,4 +1,4 @@
-<form class="form-inline" class="col-md-4">
+<form class="form-inline" class="col-md-6">
     <div class="form-group">
         <input type="text" class="form-control" id="exampleInputName2" placeholder="ID">
     </div>
