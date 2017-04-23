@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.client.RestTemplate;
 
 @Controller
-@RequestMapping("/intergratedSearch?")
+@RequestMapping("/intergratedSearch")
 public class SearchController{
     @RequestMapping(method = RequestMethod.GET)
     public String initSearch(@RequestParam("searchID") String ID, Model model) {
