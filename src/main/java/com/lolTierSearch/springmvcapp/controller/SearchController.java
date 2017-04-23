@@ -16,7 +16,7 @@ import org.springframework.web.client.RestTemplate;
 @RequestMapping("/intergratedSearch")
 public class SearchController{
     @RequestMapping(method = RequestMethod.GET)
-    public String initSearch(@RequestParam("searchID") String ID, Model model) {
+    public String initSearch(@RequestParam("ID") String ID, Model model) {
         RestTemplate restTemplate = new RestTemplate();
         String userInfo = restTemplate.getForObject("https://kr.api.riotgames.com" +
                         "/lol/summoner/v3/summoners/by-name/" + ID +

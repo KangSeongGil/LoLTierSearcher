@@ -1,6 +1,6 @@
 <div class="row" style="margin-top: 100px" ;>
     <div class="col-md-6 col-md-offset-5">
-        <form class="form-inline" action="http://52.78.55.157:8081/Demo/intergratedSearch" method="get">
+        <form class="form-inline" method="get" action="http://52.78.55.157:8081/Demo/intergratedSearch">
             <div class="form-group">
                 <input type="text" class="form-control" id="searchID" placeholder="ID">
             </div>
