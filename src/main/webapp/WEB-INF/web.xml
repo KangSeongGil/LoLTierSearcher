@@ -25,8 +25,7 @@
         <param-name>contextConfigLocation</param-name>
         <param-value>
             /WEB-INF/root-context.xml,
-            /WEB-INF/spring-mvc-servlet.xml,
-            /WEB-INF/log4j.properties
+            /WEB-INF/spring-mvc-servlet.xml
         </param-value>
     </context-param>
 
