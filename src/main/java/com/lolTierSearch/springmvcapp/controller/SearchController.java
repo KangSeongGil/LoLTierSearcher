@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.client.RestTemplate;
 
 @Controller
-@RequestMapping("/intergrated_search")
-public class SearchController {
+@RequestMapping("/intergratedSearch")
+public class SearchController{
     @RequestMapping(method = RequestMethod.GET)
     public String initSearch(@RequestParam("searchID") String ID, Model model) {
         RestTemplate restTemplate = new RestTemplate();
