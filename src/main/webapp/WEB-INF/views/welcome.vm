@@ -2,7 +2,7 @@
     <div class="col-md-6 col-md-offset-5">
         <form class="form-inline" method="get" action="http://52.78.55.157:8081/Demo/intergratedSearch">
             <div class="form-group">
-                <input type="text" class="form-control" id="searchID" placeholder="ID">
+                <input type="text" class="form-control" name="searchID" placeholder="ID">
             </div>
             <button type="submit" class="btn btn-default">Search</button>
         </form>
