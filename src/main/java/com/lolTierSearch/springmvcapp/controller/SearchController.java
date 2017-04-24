@@ -23,7 +23,7 @@ public class SearchController{
                         "/lol/summoner/v3/summoners/by-name/" +ID+
                         "?api_key=RGAPI-d9340852-9050-4375-ac10-8b151d3d29ad"
                 , String.class);
-        model.addAttribute("headerCheck","index");
+        model.addAttribute("headerCheck","intergration");
         model.addAttribute("greeting",userInfo);
         return "intergration_search";
     }
