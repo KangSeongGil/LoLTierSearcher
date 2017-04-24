@@ -16,6 +16,7 @@ public class HelloWorldController {
 
     @RequestMapping(method = RequestMethod.GET)
     public String sayHello(Model model) {
+        model.addAttribute("headerCheck","index");
         return "welcome";
     }
 

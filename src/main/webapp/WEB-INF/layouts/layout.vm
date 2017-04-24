@@ -8,7 +8,10 @@
 </head>
 <body>
 
-    #parse("/WEB-INF/fragments/_header.vm")
+    #if($headerCheck == "index")
+        #parse("/WEB-INF/fragments/_header.vm")
+    #end
+
     $screen_content
     #parse("/WEB-INF/fragments/_footer.vm")
 </body>
