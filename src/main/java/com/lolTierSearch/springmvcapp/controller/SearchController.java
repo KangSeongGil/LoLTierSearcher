@@ -24,7 +24,7 @@ public class SearchController{
                         "?api_key=RGAPI-d9340852-9050-4375-ac10-8b151d3d29ad"
                 , String.class);
         userInfo+=" "+ID;
-        model.addAttribute("greeting", ID);
+        model.addAttribute("greeting",userInfo);
         return "intergration_search";
     }
 }
