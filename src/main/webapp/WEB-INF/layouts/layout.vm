@@ -8,8 +8,11 @@
 </head>
 <body>
 
+
     #if($headerCheck == "index")
-        #parse("/WEB-INF/fragments/_header.vm")
+        #parse("/WEB-INF/fragments/index_header.vm")
+    #elseif($headerCheck == "intergration")
+        #parse("/WEB-INF/fragments/inter_header.vm")
     #end
 
     $screen_content
