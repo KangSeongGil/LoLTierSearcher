@@ -4,11 +4,14 @@
             <ul class="nav navbar-nav">
                 <li><a>index</a></li>
                 <li role="presentation" class="dropdown" class = "active">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                    <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                        aria-expanded="false">
                         검색<span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu">
+                        <li><a href="#">종합</a></li>
+                        <li><a href="#">Solo Lank</a></li>
+                        <li><a href="#">Duo Lank</a></li>
                     </ul>
                 </li>
                 <li><a>만든이</a></li>
@@ -16,3 +19,5 @@
         </div>
     </div>
 </div>
+
+
