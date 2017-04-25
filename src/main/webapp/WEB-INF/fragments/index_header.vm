@@ -4,7 +4,7 @@
             <ul class="nav navbar-nav">
                 <li><a>Home</a></li>
                 <li class="dropdown">
-                    <a href="#" id="dropdownCategoryMenu" data-toggle="dropdown">Category<i class="caret"></i></a>
+                    <a id="dropdownCategoryMenu" data-toggle="dropdown">Category<i class="caret"></i></a>
                     <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownCategoryMenu">
                         <li><a>전체보기</a></li>
                         <li><a>Test 1</a></li>
