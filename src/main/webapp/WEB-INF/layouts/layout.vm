@@ -12,7 +12,6 @@
 </head>
 <body>
 
-
     #if($headerCheck == "index")
         #parse("/WEB-INF/fragments/index_header.vm")
     #elseif($headerCheck == "intergration")
