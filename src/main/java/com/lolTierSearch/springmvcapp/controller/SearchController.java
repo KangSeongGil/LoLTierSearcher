@@ -34,7 +34,7 @@ public class SearchController {
             initUserInfo(jasonData);
         }
 
-        model.addAttribute("jsonData", user.getName());
+        model.addAttribute("jsonData", user.getID());
         model.addAttribute("headerCheck", "intergration");
 
         return "intergration_search";
@@ -45,9 +45,9 @@ public class SearchController {
 
         try {
             JsonNode root = mapper.readTree(jasonData);
-            user = new User(root.path("ID").asInt(), root.path("accountId").asInt(), root.path("name").asText(),
-                    root.path("profileIconId").asInt(), root.path("revisionDate").asInt(),
-                    root.path("summonerLevel").asInt());
+            user = new User(root.path("ID").asLong(), root.path("accountId").asLong(), root.path("name").asText(),
+                    root.path("profileIconId").asLong(), root.path("revisionDate").asLong(),
+                    root.path("summonerLevel").asLong());
         } catch (IOException e) {
             e.printStackTrace();
         }

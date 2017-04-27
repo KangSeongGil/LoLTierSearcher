@@ -4,14 +4,15 @@ package com.lolTierSearch.springmvcapp.model;
  * Created by KangSeongGil on 2017. 4. 27..
  */
 public class User {
-    private int ID;
-    private int accountID;
+    private long ID;
+    private long accountID;
     private String name;
-    private int profileIconID;
-    private int revisionDate;
-    private int level;
+    private long profileIconID;
+    private long revisionDate;
+    private long level;
 
-    public User(int ID, int accountID, String name, int profileIconID, int revisionDate, int level) {
+    public User(long ID, long accountID, String name, long profileIconID, long revisionDate, long level) {
+
         this.ID = ID;
         this.accountID = accountID;
         this.name = name;
@@ -20,19 +21,19 @@ public class User {
         this.level = level;
     }
 
-    public int getID() {
+    public long getID() {
         return ID;
     }
 
-    public void setID(int ID) {
+    public void setID(long ID) {
         this.ID = ID;
     }
 
-    public int getAccountID() {
+    public long getAccountID() {
         return accountID;
     }
 
-    public void setAccountID(int accountID) {
+    public void setAccountID(long accountID) {
         this.accountID = accountID;
     }
 
@@ -44,27 +45,27 @@ public class User {
         this.name = name;
     }
 
-    public int getProfileIconID() {
+    public long getProfileIconID() {
         return profileIconID;
     }
 
-    public void setProfileIconID(int profileIconID) {
+    public void setProfileIconID(long profileIconID) {
         this.profileIconID = profileIconID;
     }
 
-    public int getRevisionDate() {
+    public long getRevisionDate() {
         return revisionDate;
     }
 
-    public void setRevisionDate(int revisionDate) {
+    public void setRevisionDate(long revisionDate) {
         this.revisionDate = revisionDate;
     }
 
-    public int getLevel() {
+    public long getLevel() {
         return level;
     }
 
-    public void setLevel(int level) {
+    public void setLevel(long level) {
         this.level = level;
     }
 }
