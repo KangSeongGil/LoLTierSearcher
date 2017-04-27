@@ -25,13 +25,18 @@ public class SearchController {
     @RequestMapping(method = RequestMethod.GET)
     public String initSearch(HttpServletRequest request, Model model) throws IOException {
         String ID = request.getParameter("searchID");
+        ObjectMapper mapper = new ObjectMapper();
 
         if (user == null) {
-            initUserInfo(ID);
+           // initUserInfo(ID);
         }
 
         model.addAttribute("headerCheck", "intergration");
-        model.addAttribute("check", user.getID());
+        //model.addAttribute("check", user.getID());
+        model.addAttribute("jsonData", mapper.readTree("https://kr.api.riotgames.com" +
+                "/lol/summoner/v3/summoners/by-name/" + ID +
+                "?api_key=RGAPI-d9340852-9050-4375-ac10-8b151d3d29ad"););
+
 
         return "intergration_search";
     }
