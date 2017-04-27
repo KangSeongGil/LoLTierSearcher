@@ -34,7 +34,7 @@ public class SearchController {
             initUserInfo(jasonData);
         }
 
-        model.addAttribute("jsonData", user.getID());
+        model.addAttribute("jsonData", jasonData);
         model.addAttribute("headerCheck", "intergration");
 
         return "intergration_search";
