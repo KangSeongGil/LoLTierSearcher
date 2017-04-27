@@ -1,21 +1,21 @@
-<div class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
-        <div class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
-                <li><a>Home</a></li>
-                <li class="dropdown">
-                    <a href="#" id="dropdownCategoryMenu" data-toggle="dropdown">Category <i class="caret"></i></a>
-                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownCategoryMenu">
-                        <li><a href="/category">전체보기</a></li> <li class="divider"></li>
-                        <li><a href="/category/1">Test 1</a></li> <li><a href="/category/2">
-                        <li><a href="/category/3">Test 3</a></li>
-                        <li><a href="/category/4">Test 4</a></li>
-                    </ul>
-                </li>
-                <li><a>만든이</a></li>
-            </ul>
+<div class="bs-example">
+    <nav id="myNavbar" class="navbar navbar-default" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="container">
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a>Home</a></li>
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle">Search<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a>종합</a></li>
+                            <li><a>솔로랭크</a></li>
+                            <li><a>듀오랭크</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
         </div>
-    </div>
+    </nav>
 </div>
-
-
