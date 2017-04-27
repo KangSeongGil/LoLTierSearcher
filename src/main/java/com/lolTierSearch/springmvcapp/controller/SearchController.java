@@ -12,9 +12,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.client.RestTemplate;
+
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
-
 
 
 @Controller
@@ -25,36 +26,31 @@ public class SearchController {
     @RequestMapping(method = RequestMethod.GET)
     public String initSearch(HttpServletRequest request, Model model) throws IOException {
         String ID = request.getParameter("searchID");
-        ObjectMapper mapper = new ObjectMapper();
+        RestTemplate restTemplate = new RestTemplate();
+        String jasonData = restTemplate.getForObject("https://kr.api.riotgames.com/lol/summoner/v3/summoners/by-name/"
+                + ID + "?api_key=RGAPI-d9340852-9050-4375-ac10-8b151d3d29ad", String.class);
 
         if (user == null) {
-           // initUserInfo(ID);
+            initUserInfo(jasonData);
         }
 
         model.addAttribute("headerCheck", "intergration");
-        //model.addAttribute("check", user.getID());
-        model.addAttribute("jsonData", mapper.readTree("https://kr.api.riotgames.com" +
-                "/lol/summoner/v3/summoners/by-name/" + ID +
-                "?api_key=RGAPI-d9340852-9050-4375-ac10-8b151d3d29ad"));
-
 
         return "intergration_search";
     }
 
-    public void initUserInfo(String ID) {
+    private void initUserInfo(String jasonData) {
         ObjectMapper mapper = new ObjectMapper();
 
-
         try {
-            JsonNode root = mapper.readTree("https://kr.api.riotgames.com" +
-                    "/lol/summoner/v3/summoners/by-name/" + ID +
-                    "?api_key=RGAPI-d9340852-9050-4375-ac10-8b151d3d29ad");
-            user = new User(root.path("ID").asInt(),root.path("accountId").asInt(),root.path("name").asText(),
-                            root.path("profileIconId").asInt(),root.path("revisionDate").asInt(),
-                            root.path("summonerLevel").asInt());
+            JsonNode root = mapper.readTree(jasonData);
+            user = new User(root.path("ID").asInt(), root.path("accountId").asInt(), root.path("name").asText(),
+                    root.path("profileIconId").asInt(), root.path("revisionDate").asInt(),
+                    root.path("summonerLevel").asInt());
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
+
+
 }
