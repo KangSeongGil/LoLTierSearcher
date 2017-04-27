@@ -7,11 +7,11 @@ public class User {
     private long ID;
     private long accountID;
     private String name;
-    private long profileIconID;
+    private int profileIconID;
     private long revisionDate;
     private long level;
 
-    public User(long ID, long accountID, String name, long profileIconID, long revisionDate, long level) {
+    public User(long ID, long accountID, String name, int profileIconID, long revisionDate, long level) {
 
         this.ID = ID;
         this.accountID = accountID;
@@ -45,11 +45,11 @@ public class User {
         this.name = name;
     }
 
-    public long getProfileIconID() {
+    public int getProfileIconID() {
         return profileIconID;
     }
 
-    public void setProfileIconID(long profileIconID) {
+    public void setProfileIconID(int profileIconID) {
         this.profileIconID = profileIconID;
     }
 
