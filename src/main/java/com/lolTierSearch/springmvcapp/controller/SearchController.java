@@ -26,10 +26,10 @@ public class SearchController {
     public String initSearch(HttpServletRequest request, Model model) throws IOException {
         String ID = request.getParameter("searchID");
 
-        initUserInfo(ID);
         if (user == null) {
             initUserInfo(ID);
         }
+
         model.addAttribute("headerCheck", "intergration");
         model.addAttribute("check", user.getName());
 
