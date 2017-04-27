@@ -45,7 +45,7 @@ public class SearchController {
 
         try {
             JsonNode root = mapper.readTree(jasonData);
-            user = new User(root.path("ID").asLong(), root.path("accountId").asLong(), root.path("name").asText(),
+            user = new User(root.path("id").asLong(), root.path("accountId").asLong(), root.path("name").asText(),
                     root.path("profileIconId").asInt(), root.path("revisionDate").asLong(),
                     root.path("summonerLevel").asLong());
         } catch (IOException e) {
