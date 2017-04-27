@@ -31,7 +31,7 @@ public class SearchController {
         }
 
         model.addAttribute("headerCheck", "intergration");
-        model.addAttribute("check", user.getName());
+        model.addAttribute("check", user.getID());
 
         return "intergration_search";
     }
